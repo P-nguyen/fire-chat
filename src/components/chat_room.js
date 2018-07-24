@@ -1,5 +1,6 @@
 import React from 'react';
 import db from '../hoc/db';
+import MessageInput from './message_input';
 
 const ChatRoom = props => {
     const messageElements = props.messages.map( msg => {
@@ -18,6 +19,9 @@ const ChatRoom = props => {
     return (
         <div>
             <h1 className="center">Chat Room</h1>
+            
+            <MessageInput send={props.sendMessage}/>
+            
             <ul className="collection">
                 {messageElements}
             </ul>
