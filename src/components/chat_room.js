@@ -7,7 +7,9 @@ const ChatRoom = props => {
         return (
             <li key={msg.id} className="collection-item row">
                 <div className="col s1">
-                    <b>{msg.name}:</b>
+                    <b style={{
+                        color: msg.color
+                    }}>{msg.name}:</b>
                 </div>
                 <div className="col s11">
                     {msg.message}
